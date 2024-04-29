@@ -1,14 +1,24 @@
-﻿namespace ConsoleApp
+namespace ConsoleApp
 {
     class Program
     {
         public static void Main(string[] args)
         {
-            Sort.MaxNumber();
+            int n = 0;
+            int[] ints = new int[10];
+            while (n < ints.Length)
+            {
+                Console.Write($"Podaj {n + 1} liczbe:");
+                ints[n] = Convert.ToInt32(Console.ReadLine());
+                n = n + 1;
+            }
+
+            Sort.MaxNumber(ints);
+
+            foreach (int i in ints)
+            {
+                Console.Write($"{i} ");
+            }
         }
-
-
-
-
     }
 }

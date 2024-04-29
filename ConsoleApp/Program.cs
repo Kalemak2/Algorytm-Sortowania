@@ -9,7 +9,7 @@ namespace ConsoleApp
             while (n < ints.Length)
             {
                 Console.Write($"Podaj {n + 1} liczbe:");
-                ints[n] = Convert.ToInt32(Console.ReadLine());
+                int.TryParse(Console.ReadLine(), out ints[n]);
                 n = n + 1;
             }
 
